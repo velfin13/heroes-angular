@@ -64,4 +64,16 @@ export class HeroesService {
   constructor() {
     console.log('servicio listo para usarse!');
   }
+
+  getHeroes():Heroe[] {
+    return this.heroes;
+  }
+}
+
+export interface Heroe {
+  nombre;
+  bio;
+  img;
+  aparicion;
+  casa;
 }
