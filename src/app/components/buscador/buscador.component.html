@@ -1,0 +1,22 @@
+<h1>
+  Buscando... <span>{{ termino }}</span>
+</h1>
+<hr />
+<div class="card-columns">
+  <div
+    class="card animated fadeIn fast"
+    *ngFor="let heroe of heroes; let id = index"
+  >
+    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">
+        {{ heroe.bio }}
+      </p>
+      <p class="card-text">
+        <small class="text-muted">{{ heroe.aparicion }}</small>
+      </p>
+      <a [routerLink]="['/heroes']" class="btn btn-outline-danger"></a>
+    </div>
+  </div>
+</div>
